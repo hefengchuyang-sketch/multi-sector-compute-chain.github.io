@@ -6,9 +6,9 @@
   <title>Hyperion | 60s One Pager</title>
   <style>
     :root {
-      --bg: #05070f;
-      --card: #0c1224;
-      --line: #1f2b52;
+      --bg: #08111e;
+      --card: rgba(16, 28, 46, 0.78);
+      --line: rgba(120, 170, 214, 0.26);
       --text: #d9e7ff;
       --muted: #8ea2d8;
       --accent: #2de2ff;
@@ -24,8 +24,9 @@
       margin: 0;
       font-family: "Space Grotesk", "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 10% 10%, rgba(45, 226, 255, 0.15), transparent 30%),
-        radial-gradient(circle at 90% 0%, rgba(54, 242, 163, 0.12), transparent 26%),
+        radial-gradient(circle at 10% 10%, rgba(45, 226, 255, 0.2), transparent 34%),
+        radial-gradient(circle at 90% 0%, rgba(54, 242, 163, 0.14), transparent 30%),
+        radial-gradient(circle at 50% 110%, rgba(122, 150, 255, 0.14), transparent 38%),
         var(--bg);
       color: var(--text);
     }
@@ -78,11 +79,12 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, rgba(45, 226, 255, 0.1), rgba(54, 242, 163, 0.08));
+      background: linear-gradient(135deg, rgba(45, 226, 255, 0.14), rgba(54, 242, 163, 0.1));
       border: 1px solid var(--line);
       border-radius: 20px;
       padding: 24px;
       margin-bottom: 16px;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
     }
 
     h1 {
@@ -93,7 +95,7 @@
     .sub {
       color: var(--muted);
       margin: 0;
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     .grid {
@@ -108,6 +110,13 @@
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 14px;
+      backdrop-filter: blur(6px);
+      transition: transform 220ms ease, border-color 220ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(45, 226, 255, 0.4);
     }
 
     .card h3 {
@@ -120,7 +129,7 @@
     .card li {
       margin: 0;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.75;
       font-size: 0.95rem;
     }
 
@@ -157,6 +166,7 @@
       padding: 14px;
       color: var(--text);
       font-weight: 600;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
     }
   </style>
 </head>
@@ -172,7 +182,7 @@
 
     <section class="hero">
       <h1 data-i18n="title">Hyperion 60 秒速览</h1>
-      <p class="sub" data-i18n="subtitle">一个可验证算力市场协议：把“算力交付”从黑箱过程变成可追溯、可审计、可解释的流程资产。</p>
+      <p class="sub" data-i18n="subtitle">一个可验证算力市场协议：把“算力交付”从黑箱过程，变成可追溯、可审计、可解释的可信流程。</p>
       <div class="pill-row">
         <span class="pill" data-i18n="tag1">可验证执行</span>
         <span class="pill" data-i18n="tag2">双账户演示</span>
@@ -233,15 +243,15 @@
       zh: {
         back: '← 返回主站',
         title: 'Hyperion 60 秒速览',
-        subtitle: '一个可验证算力市场协议：把“算力交付”从黑箱过程变成可追溯、可审计、可解释的流程资产。',
+        subtitle: '一个可验证算力市场协议：把“算力交付”从黑箱过程，变成可追溯、可审计、可解释的可信流程。',
         tag1: '可验证执行',
         tag2: '双账户演示',
         tag3: '分账透明化',
         tag4: '向真实付费验证推进',
         c1t: '问题',
-        c1d: '现有算力市场强调价格和速度，但缺少可验证执行证据，导致信任成本随规模上升。',
+        c1d: '现有算力市场强调价格和速度，但可验证执行证据不足，信任成本会随规模上升。',
         c2t: '方案',
-        c2d: '通过协议层统一订单、执行状态、结果哈希和争议判定；通过产品层展示任务链路与结算细节。',
+        c2d: '在协议层统一订单、执行状态、结果哈希和争议判定；在产品层把任务链路与结算细节讲清楚。',
         c3t: '护城河',
         c3a: '可复现执行链路（可录屏、可脚本化）',
         c3b: '可解释经济模型（矿工/平台/财库）',
@@ -255,21 +265,21 @@
         c5b: 'Q3: 接入执行证明与自动 SLA 评估',
         c5c: 'Q4-Q1: 外部 workload 试点与早期付费验证',
         c6t: '为什么重要',
-        c6d: '如果算力交付不能被独立验证，市场越大，纠纷与风控成本越高。Hyperion 把验证前置为协议能力。',
-        cta: '想看完整论证，请返回主站查看架构拆解、路线图和研发日志。',
+        c6d: '当算力交付无法独立验证时，市场越大，纠纷与风控成本越高。Hyperion 将验证前置为协议能力。',
+        cta: '想看完整论证，可返回主站查看架构拆解、路线图和研发日志。',
       },
       en: {
         back: '← Back to Main Site',
         title: 'Hyperion in 60 Seconds',
-        subtitle: 'A verifiable compute market protocol that turns compute delivery from black-box execution into traceable, auditable, explainable process assets.',
+        subtitle: 'A verifiable compute market protocol that turns black-box delivery into a traceable, auditable, explainable flow.',
         tag1: 'Verifiable Execution',
         tag2: 'Dual-Account Demo',
         tag3: 'Transparent Settlement',
         tag4: 'Moving Toward Paid Validation',
         c1t: 'Problem',
-        c1d: 'Most compute markets optimize for price and speed, but lack execution verifiability, causing trust costs to scale with market size.',
+        c1d: 'Most compute markets optimize for price and speed, but still lack enough execution verifiability, so trust costs scale with size.',
         c2t: 'Solution',
-        c2d: 'Unify orders, execution states, result hashes, and dispute verdicts at protocol level; expose full task and settlement flow at product level.',
+        c2d: 'Unify orders, execution states, result hashes, and dispute verdicts at protocol level, then expose the full task and settlement flow at product level.',
         c3t: 'Moat',
         c3a: 'Reproducible delivery flow (recordable, scriptable)',
         c3b: 'Explainable economics (miner/platform/treasury)',
@@ -283,7 +293,7 @@
         c5b: 'Q3: Integrate execution proofs and SLA automation',
         c5c: 'Q4-Q1: External workload pilots and early paid validation',
         c6t: 'Why It Matters',
-        c6d: 'If compute delivery cannot be independently verified, dispute and risk-control costs grow with scale. Hyperion puts verification into protocol primitives.',
+        c6d: 'If compute delivery cannot be independently verified, dispute and risk-control costs grow with scale. Hyperion treats verification as a protocol primitive.',
         cta: 'Looking for the full thesis? Return to the main site for architecture breakdown, roadmap, and build logs.',
       },
     }
