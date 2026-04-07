@@ -183,35 +183,50 @@
 
       <section id="structure" class="panel reveal">
         <div class="panel-head">
-          <h3 data-i18n="structureTitle">项目结构图</h3>
-          <p data-i18n="structureDesc">这张图对应“谁在使用、系统如何调度、如何验证、如何结算”的完整路径。</p>
+          <h3 data-i18n="structureTitle">商业化技术结构图</h3>
+          <p data-i18n="structureDesc">从需求进入到交付可信，再到收入沉淀与治理反馈，这张图把业务闭环和技术闭环放在同一视角。</p>
         </div>
 
-        <div class="structure-layout">
-          <article class="structure-card">
-            <h4 data-i18n="sFlowTitle">系统分层与流转</h4>
-            <div class="stack-diagram">
-              <div class="stack-node node-a" data-i18n="s1">接入层：Web UI / API / SDK</div>
-              <div class="stack-arrow">↓</div>
-              <div class="stack-node node-b" data-i18n="s2">交易层：订单簿、动态定价、任务调度</div>
-              <div class="stack-arrow">↓</div>
-              <div class="stack-node node-c" data-i18n="s3">执行层：矿工执行、结果回传、争议判定</div>
-              <div class="stack-arrow">↓</div>
-              <div class="stack-node node-d" data-i18n="s4">结算层：收益分账、平台费、财库治理</div>
-            </div>
+        <div class="biz-structure-grid">
+          <article class="biz-card">
+            <h4 data-i18n="bs1Title">1) 需求与交易入口</h4>
+            <ul class="biz-list">
+              <li data-i18n="bs1a">客户通过 Web / API / SDK 提交任务需求</li>
+              <li data-i18n="bs1b">订单簿与动态定价完成供需匹配</li>
+              <li data-i18n="bs1c">调度层按成本、信誉、可用性分发任务</li>
+            </ul>
           </article>
 
-          <article class="structure-card">
-            <h4 data-i18n="sMapTitle">模块映射（核心代码域）</h4>
-            <ul class="structure-list">
-              <li><b data-i18n="sm1h">订单与市场：</b> <span data-i18n="sm1d">compute_market_orderbook / dynamic_pricing / compute_scheduler</span></li>
-              <li><b data-i18n="sm2h">执行与验证：</b> <span data-i18n="sm2d">pouw_executor / task_acceptance / arbitration / zk_verification</span></li>
-              <li><b data-i18n="sm3h">安全与审计：</b> <span data-i18n="sm3d">miner_security_manager / attack_prevention / audit_compliance</span></li>
-              <li><b data-i18n="sm4h">结算与治理：</b> <span data-i18n="sm4d">revenue_tracking / protocol_fee_pool / dao_treasury / governance</span></li>
-              <li><b data-i18n="sm5h">网络与基础设施：</b> <span data-i18n="sm5d">message_queue / tcp_network / p2p_task_distributor / storage</span></li>
+          <article class="biz-card">
+            <h4 data-i18n="bs2Title">2) 可信交付引擎</h4>
+            <ul class="biz-list">
+              <li data-i18n="bs2a">矿工执行、结果回传、验收判定形成交付证据</li>
+              <li data-i18n="bs2b">争议仲裁、审计记录、安全策略降低履约风险</li>
+              <li data-i18n="bs2c">核心模块：pouw_executor / task_acceptance / arbitration / audit</li>
+            </ul>
+          </article>
+
+          <article class="biz-card">
+            <h4 data-i18n="bs3Title">3) 收入沉淀与治理增长</h4>
+            <ul class="biz-list">
+              <li data-i18n="bs3a">收益分账明确矿工收入、平台费、财库税</li>
+              <li data-i18n="bs3b">治理参数反哺定价、风控和调度策略</li>
+              <li data-i18n="bs3c">核心模块：revenue_tracking / protocol_fee_pool / dao_treasury / governance</li>
             </ul>
           </article>
         </div>
+
+        <div class="biz-loop" aria-label="business technical loop">
+          <div class="loop-node" data-i18n="bl1">需求进入</div>
+          <span class="loop-arrow">→</span>
+          <div class="loop-node" data-i18n="bl2">可信执行</div>
+          <span class="loop-arrow">→</span>
+          <div class="loop-node" data-i18n="bl3">透明结算</div>
+          <span class="loop-arrow">→</span>
+          <div class="loop-node" data-i18n="bl4">治理优化</div>
+        </div>
+
+        <p class="structure-note" data-i18n="structureNote">商业上，它对应获客-交付-复购；技术上，它对应调度-验证-结算-治理。</p>
       </section>
 
       <section id="architecture" class="panel reveal">
