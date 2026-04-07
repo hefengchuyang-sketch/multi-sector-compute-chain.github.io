@@ -6,10 +6,7 @@
     <title>Hyperion | 可验证算力市场项目博客</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -24,139 +21,195 @@
         <small>Project Intro Blog</small>
       </div>
       <nav>
-        <a href="#vision">理念</a>
-        <a href="#features">功能</a>
-        <a href="#architecture">架构</a>
-        <a href="#roadmap">路线图</a>
-        <a href="#logs">研发日志</a>
+        <a href="#vision" data-i18n="navVision">理念</a>
+        <a href="#features" data-i18n="navFeatures">功能</a>
+        <a href="#visuals" data-i18n="navVisuals">图示</a>
+        <a href="#architecture" data-i18n="navArchitecture">架构</a>
+        <a href="#roadmap" data-i18n="navRoadmap">路线图</a>
+        <a href="#logs" data-i18n="navLogs">研发日志</a>
       </nav>
+      <div class="lang-switch">
+        <button id="lang-zh" class="lang-btn active">中文</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+        <a class="btn ghost small" href="./onepager.html" data-i18n="onePager">60 秒速览</a>
+      </div>
     </header>
 
     <main>
       <section class="hero reveal">
-        <p class="tagline">Scholarship-Ready Build Narrative</p>
-        <h1>把算力交易从“信任叙事”升级为“证据叙事”。</h1>
-        <p class="subtitle">
-          Hyperion 聚焦可验证算力市场：订单、执行、结果与结算全链路可解释。这个博客不仅展示功能，更展示理念、方法论与可复现执行力。
-        </p>
+        <p class="tagline" data-i18n="tagline">Scholarship-Ready Build Narrative</p>
+        <h1 data-i18n="heroTitle">把算力交易从“信任叙事”升级为“证据叙事”。</h1>
+        <p class="subtitle" data-i18n="heroSubtitle">Hyperion 聚焦可验证算力市场：订单、执行、结果与结算全链路可解释。这个博客不仅展示功能，更展示理念、方法论与可复现执行力。</p>
         <div class="hero-cta">
-          <a class="btn primary" href="#features">查看核心功能</a>
-          <a class="btn ghost" href="#logs">阅读研发日志</a>
+          <a class="btn primary" href="#features" data-i18n="heroCta1">查看核心功能</a>
+          <a class="btn ghost" href="#logs" data-i18n="heroCta2">阅读研发日志</a>
         </div>
       </section>
 
       <section class="kpi-grid reveal">
         <article class="kpi-card">
-          <p>可复现演示链路</p>
+          <p data-i18n="kpi1Label">可复现演示链路</p>
           <h2 data-counter="4">0</h2>
-          <span>提交订单 → 接单执行 → 结果回传 → 结算可视化</span>
+          <span data-i18n="kpi1Desc">提交订单 → 接单执行 → 结果回传 → 结算可视化</span>
         </article>
         <article class="kpi-card">
-          <p>核心能力模块</p>
+          <p data-i18n="kpi2Label">核心能力模块</p>
           <h2 data-counter="12">0</h2>
-          <span>覆盖订单、任务、审计、风控、分账、矿工行为等</span>
+          <span data-i18n="kpi2Desc">覆盖订单、任务、审计、风控、分账、矿工行为等</span>
         </article>
         <article class="kpi-card">
-          <p>启动方式</p>
+          <p data-i18n="kpi3Label">启动方式</p>
           <h2 data-counter="2">0</h2>
-          <span>本地一键启动与 Docker 部署双路径</span>
+          <span data-i18n="kpi3Desc">本地一键启动与 Docker 部署双路径</span>
         </article>
       </section>
 
       <section id="vision" class="panel reveal">
         <div class="panel-head">
-          <h3>项目理念</h3>
-          <p>不是“再做一个算力平台”，而是定义下一代可验证算力交易协议。</p>
+          <h3 data-i18n="visionTitle">项目理念</h3>
+          <p data-i18n="visionDesc">不是“再做一个算力平台”，而是定义下一代可验证算力交易协议。</p>
         </div>
         <div class="vision-grid">
           <article>
-            <h4>1. 可验证优先</h4>
-            <p>交付结果必须可追溯、可审计、可复盘，执行证据是产品核心资产。</p>
+            <h4 data-i18n="v1t">1. 可验证优先</h4>
+            <p data-i18n="v1d">交付结果必须可追溯、可审计、可复盘，执行证据是产品核心资产。</p>
           </article>
           <article>
-            <h4>2. 工程可落地</h4>
-            <p>坚持用可运行 Demo 验证假设，用真实链路替代 PPT 叙事。</p>
+            <h4 data-i18n="v2t">2. 工程可落地</h4>
+            <p data-i18n="v2d">坚持用可运行 Demo 验证假设，用真实链路替代 PPT 叙事。</p>
           </article>
           <article>
-            <h4>3. 经济可解释</h4>
-            <p>矿工收益、平台费用、财库分配透明可见，建立长期机制信任。</p>
+            <h4 data-i18n="v3t">3. 经济可解释</h4>
+            <p data-i18n="v3d">矿工收益、平台费用、财库分配透明可见，建立长期机制信任。</p>
           </article>
         </div>
       </section>
 
       <section id="features" class="panel reveal">
         <div class="panel-head">
-          <h3>功能全景</h3>
-          <p>覆盖“下单、执行、验收、结算、治理”的完整产品闭环。</p>
+          <h3 data-i18n="featuresTitle">功能全景</h3>
+          <p data-i18n="featuresDesc">覆盖“下单、执行、验收、结算、治理”的完整产品闭环。</p>
         </div>
         <div class="feature-matrix">
           <article>
-            <h4>订单与市场层</h4>
+            <h4 data-i18n="f1t">订单与市场层</h4>
             <ul>
-              <li>动态定价与订单簿</li>
-              <li>免费单/付费单双模式</li>
-              <li>双账户角色协作演示</li>
+              <li data-i18n="f1a">动态定价与订单簿</li>
+              <li data-i18n="f1b">免费单/付费单双模式</li>
+              <li data-i18n="f1c">双账户角色协作演示</li>
             </ul>
           </article>
           <article>
-            <h4>执行与验收层</h4>
+            <h4 data-i18n="f2t">执行与验收层</h4>
             <ul>
-              <li>任务状态实时追踪</li>
-              <li>结果文件回传与下载</li>
-              <li>协议判定与争议处理</li>
+              <li data-i18n="f2a">任务状态实时追踪</li>
+              <li data-i18n="f2b">结果文件回传与下载</li>
+              <li data-i18n="f2c">协议判定与争议处理</li>
             </ul>
           </article>
           <article>
-            <h4>结算与治理层</h4>
+            <h4 data-i18n="f3t">结算与治理层</h4>
             <ul>
-              <li>矿工收益/平台费/财库税可视化</li>
-              <li>账户与 UTXO 追溯</li>
-              <li>治理提案与投票接口</li>
+              <li data-i18n="f3a">矿工收益/平台费/财库税可视化</li>
+              <li data-i18n="f3b">账户与 UTXO 追溯</li>
+              <li data-i18n="f3c">治理提案与投票接口</li>
             </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="visuals" class="panel reveal">
+        <div class="panel-head">
+          <h3 data-i18n="visualTitle">科技感图示</h3>
+          <p data-i18n="visualDesc">用流程图和能力图把系统机制直观呈现给国际评审。</p>
+        </div>
+
+        <div class="visual-grid">
+          <article class="visual-card">
+            <h4 data-i18n="flowTitle">任务执行流程图</h4>
+            <svg viewBox="0 0 860 220" class="flow-svg" role="img" aria-label="task flow">
+              <defs>
+                <linearGradient id="nodeGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#15314c" />
+                  <stop offset="100%" stop-color="#0c1f32" />
+                </linearGradient>
+                <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#37e2d5" />
+                  <stop offset="100%" stop-color="#ff8a3c" />
+                </linearGradient>
+              </defs>
+              <g fill="none" stroke="url(#lineGrad)" stroke-width="4">
+                <path d="M150 110 H250" />
+                <path d="M350 110 H450" />
+                <path d="M550 110 H650" />
+              </g>
+              <g fill="url(#nodeGrad)" stroke="#2f5a80" stroke-width="2">
+                <rect x="20" y="70" width="130" height="80" rx="14" />
+                <rect x="220" y="70" width="130" height="80" rx="14" />
+                <rect x="420" y="70" width="130" height="80" rx="14" />
+                <rect x="620" y="70" width="130" height="80" rx="14" />
+              </g>
+              <g fill="#cfe8ff" font-size="16" font-family="IBM Plex Sans" text-anchor="middle">
+                <text x="85" y="112" data-i18n-svg="flow1">提交订单</text>
+                <text x="285" y="112" data-i18n-svg="flow2">矿工接单</text>
+                <text x="485" y="112" data-i18n-svg="flow3">执行计算</text>
+                <text x="685" y="112" data-i18n-svg="flow4">结果与分账</text>
+              </g>
+            </svg>
+          </article>
+
+          <article class="visual-card">
+            <h4 data-i18n="radarTitle">能力成熟度图</h4>
+            <div class="radar-list">
+              <div class="radar-row"><span data-i18n="r1">可验证执行</span><i style="--score: 92"></i><b>92%</b></div>
+              <div class="radar-row"><span data-i18n="r2">流程可复现</span><i style="--score: 88"></i><b>88%</b></div>
+              <div class="radar-row"><span data-i18n="r3">结算可解释</span><i style="--score: 90"></i><b>90%</b></div>
+              <div class="radar-row"><span data-i18n="r4">开发迭代速度</span><i style="--score: 84"></i><b>84%</b></div>
+            </div>
           </article>
         </div>
 
         <div class="flow-board">
-          <h4>演示链路（可录制）</h4>
+          <h4 data-i18n="demoFlowTitle">演示链路（可录制）</h4>
           <ol>
-            <li>Order Account 提交任务（可选免费单）</li>
-            <li>Mining Account 接单并执行</li>
-            <li>任务输出自动回传并可下载</li>
-            <li>分账结果在界面即时展示</li>
+            <li data-i18n="d1">Order Account 提交任务（可选免费单）</li>
+            <li data-i18n="d2">Mining Account 接单并执行</li>
+            <li data-i18n="d3">任务输出自动回传并可下载</li>
+            <li data-i18n="d4">分账结果在界面即时展示</li>
           </ol>
         </div>
       </section>
 
       <section id="architecture" class="panel reveal">
         <div class="panel-head">
-          <h3>架构拆解</h3>
-          <p>点击切换不同视角，查看系统的协议、运行时和经济模型设计。</p>
+          <h3 data-i18n="archTitle">架构拆解</h3>
+          <p data-i18n="archDesc">点击切换不同视角，查看系统的协议、运行时和经济模型设计。</p>
         </div>
         <div class="arch-tabs" id="arch-tabs">
-          <button class="arch-tab active" data-arch="protocol">协议层</button>
-          <button class="arch-tab" data-arch="runtime">运行时层</button>
-          <button class="arch-tab" data-arch="economics">经济层</button>
+          <button class="arch-tab active" data-arch="protocol" data-i18n="tab1">协议层</button>
+          <button class="arch-tab" data-arch="runtime" data-i18n="tab2">运行时层</button>
+          <button class="arch-tab" data-arch="economics" data-i18n="tab3">经济层</button>
         </div>
         <article id="arch-panel" class="arch-panel"></article>
       </section>
 
       <section id="roadmap" class="panel reveal">
         <div class="panel-head">
-          <h3>12 个月路线图</h3>
-          <p>从演示验证走向真实负载试点与付费验证。</p>
+          <h3 data-i18n="roadTitle">12 个月路线图</h3>
+          <p data-i18n="roadDesc">从演示验证走向真实负载试点与付费验证。</p>
         </div>
         <ul class="roadmap-list">
-          <li><strong>Q2</strong>：强化稳定性、可观测性与 Demo 可录制性</li>
-          <li><strong>Q3</strong>：接入执行证明与 SLA 自动评估</li>
-          <li><strong>Q4</strong>：引入外部 workload，进行测试网试点</li>
-          <li><strong>Q1</strong>：形成可计量商业验证与早期付费用户</li>
+          <li data-i18n="q2"><strong>Q2</strong>：强化稳定性、可观测性与 Demo 可录制性</li>
+          <li data-i18n="q3"><strong>Q3</strong>：接入执行证明与 SLA 自动评估</li>
+          <li data-i18n="q4"><strong>Q4</strong>：引入外部 workload，进行测试网试点</li>
+          <li data-i18n="q1"><strong>Q1</strong>：形成可计量商业验证与早期付费用户</li>
         </ul>
       </section>
 
       <section id="logs" class="panel reveal">
         <div class="panel-head">
-          <h3>研发日志</h3>
-          <p>记录关键决策、失败复盘与迭代证据。</p>
+          <h3 data-i18n="logTitle">研发日志</h3>
+          <p data-i18n="logDesc">记录关键决策、失败复盘与迭代证据。</p>
         </div>
         <div id="log-filters" class="log-filters"></div>
         <div id="log-list" class="log-list"></div>
@@ -164,7 +217,7 @@
     </main>
 
     <footer class="site-footer reveal">
-      <p>Hyperion Project Blog · Built for scholarship and investor-level technical review.</p>
+      <p data-i18n="footer">Hyperion Project Blog · Built for scholarship and investor-level technical review.</p>
     </footer>
 
     <dialog id="log-dialog">
@@ -172,7 +225,7 @@
         <p id="dialog-meta" class="dialog-meta"></p>
         <h3 id="dialog-title"></h3>
         <div id="dialog-content"></div>
-        <button id="dialog-close" class="btn primary">关闭</button>
+        <button id="dialog-close" class="btn primary" data-i18n="close">关闭</button>
       </article>
     </dialog>
 
@@ -183,7 +236,7 @@
         <p class="log-excerpt"></p>
         <div class="log-foot">
           <span class="log-tag"></span>
-          <button class="btn ghost small">阅读全文</button>
+          <button class="btn ghost small" data-i18n="readMore">阅读全文</button>
         </div>
       </article>
     </template>

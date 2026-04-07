@@ -68,6 +68,26 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-btn {
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: rgba(8, 20, 33, 0.75);
+  color: var(--muted);
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -266,6 +286,68 @@ main {
   gap: 6px;
 }
 
+.visual-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.visual-card {
+  border: 1px solid rgba(36, 67, 94, 0.9);
+  border-radius: 14px;
+  background: rgba(12, 25, 40, 0.8);
+  padding: 14px;
+}
+
+.visual-card h4 {
+  margin: 0 0 10px;
+  color: var(--accent-3);
+}
+
+.flow-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.radar-list {
+  display: grid;
+  gap: 12px;
+}
+
+.radar-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 40px;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.radar-row i {
+  position: relative;
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.radar-row i::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: calc(var(--score) * 1%);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+}
+
+.radar-row b {
+  color: #d9ecff;
+  font-size: 13px;
+}
+
 .flow-board {
   margin-top: 12px;
   padding: 14px;
@@ -453,6 +535,10 @@ dialog::backdrop {
     grid-template-columns: 1fr;
   }
 
+  .visual-grid {
+    grid-template-columns: 1fr;
+  }
+
   .panel-head h3 {
     font-size: 24px;
   }
@@ -472,5 +558,15 @@ dialog::backdrop {
   nav a {
     flex: 1 0 auto;
     text-align: center;
+  }
+
+  .lang-switch {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .radar-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }

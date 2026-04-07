@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyperion | 60s One Pager</title>
+  <style>
+    :root {
+      --bg: #05070f;
+      --card: #0c1224;
+      --line: #1f2b52;
+      --text: #d9e7ff;
+      --muted: #8ea2d8;
+      --accent: #2de2ff;
+      --accent-2: #36f2a3;
+      --danger: #ff5f8a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(45, 226, 255, 0.15), transparent 30%),
+        radial-gradient(circle at 90% 0%, rgba(54, 242, 163, 0.12), transparent 26%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    .wrap {
+      width: min(1000px, 92vw);
+      margin: 32px auto 60px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 12px;
+    }
+
+    .back {
+      color: var(--muted);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      transition: 0.2s;
+    }
+
+    .back:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+
+    .lang {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .lang button {
+      background: transparent;
+      border: 0;
+      color: var(--muted);
+      padding: 7px 12px;
+      cursor: pointer;
+    }
+
+    .lang button.active {
+      background: rgba(45, 226, 255, 0.2);
+      color: var(--text);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(45, 226, 255, 0.1), rgba(54, 242, 163, 0.08));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+    }
+
+    .sub {
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .grid {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: var(--accent);
+    }
+
+    .card p,
+    .card li {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .pill-row {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .risk {
+      border-color: rgba(255, 95, 138, 0.4);
+      color: #ffb5ca;
+    }
+
+    .cta {
+      margin-top: 18px;
+      background: linear-gradient(90deg, rgba(45, 226, 255, 0.2), rgba(54, 242, 163, 0.2));
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      color: var(--text);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="back" href="index.html" data-i18n="back">← 返回主站</a>
+      <div class="lang">
+        <button id="zh" class="active">中文</button>
+        <button id="en">EN</button>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1 data-i18n="title">Hyperion 60 秒速览</h1>
+      <p class="sub" data-i18n="subtitle">一个可验证算力市场协议：把“算力交付”从黑箱过程变成可追溯、可审计、可解释的流程资产。</p>
+      <div class="pill-row">
+        <span class="pill" data-i18n="tag1">可验证执行</span>
+        <span class="pill" data-i18n="tag2">双账户演示</span>
+        <span class="pill" data-i18n="tag3">分账透明化</span>
+        <span class="pill risk" data-i18n="tag4">向真实付费验证推进</span>
+      </div>
+    </section>
+
+    <div class="grid">
+      <article class="card">
+        <h3 data-i18n="c1t">Problem</h3>
+        <p data-i18n="c1d">现有算力市场强调价格和速度，但缺少可验证执行证据，导致信任成本随规模上升。</p>
+      </article>
+
+      <article class="card">
+        <h3 data-i18n="c2t">Solution</h3>
+        <p data-i18n="c2d">通过协议层统一订单、执行状态、结果哈希和争议判定；通过产品层展示任务链路与结算细节。</p>
+      </article>
+
+      <article class="card">
+        <h3 data-i18n="c3t">Moat</h3>
+        <ul>
+          <li data-i18n="c3a">可复现执行链路（可录屏、可脚本化）</li>
+          <li data-i18n="c3b">可解释经济模型（矿工/平台/财库）</li>
+          <li data-i18n="c3c">可扩展到 SLA 与执行证明</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3 data-i18n="c4t">Current Traction</h3>
+        <ul>
+          <li data-i18n="c4a">双角色完整链路已稳定跑通</li>
+          <li data-i18n="c4b">关键模块覆盖订单、执行、验收、治理</li>
+          <li data-i18n="c4c">项目叙事已转为“证据导向”</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3 data-i18n="c5t">Next 12 Months</h3>
+        <ul>
+          <li data-i18n="c5a">Q2: 强化稳定性与可观测性</li>
+          <li data-i18n="c5b">Q3: 接入执行证明与自动 SLA 评估</li>
+          <li data-i18n="c5c">Q4-Q1: 外部 workload 试点与早期付费验证</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3 data-i18n="c6t">Why This Matters</h3>
+        <p data-i18n="c6d">如果算力交付不能被独立验证，市场越大，纠纷与风控成本越高。Hyperion 把验证前置为协议能力。</p>
+      </article>
+    </div>
+
+    <div class="cta" data-i18n="cta">Looking for a deeper view? Open the main blog for architecture, roadmap, and build logs.</div>
+  </div>
+
+  <script>
+    const dict = {
+      zh: {
+        back: '← 返回主站',
+        title: 'Hyperion 60 秒速览',
+        subtitle: '一个可验证算力市场协议：把“算力交付”从黑箱过程变成可追溯、可审计、可解释的流程资产。',
+        tag1: '可验证执行',
+        tag2: '双账户演示',
+        tag3: '分账透明化',
+        tag4: '向真实付费验证推进',
+        c1t: '问题',
+        c1d: '现有算力市场强调价格和速度，但缺少可验证执行证据，导致信任成本随规模上升。',
+        c2t: '方案',
+        c2d: '通过协议层统一订单、执行状态、结果哈希和争议判定；通过产品层展示任务链路与结算细节。',
+        c3t: '护城河',
+        c3a: '可复现执行链路（可录屏、可脚本化）',
+        c3b: '可解释经济模型（矿工/平台/财库）',
+        c3c: '可扩展到 SLA 与执行证明',
+        c4t: '当前进展',
+        c4a: '双角色完整链路已稳定跑通',
+        c4b: '关键模块覆盖订单、执行、验收、治理',
+        c4c: '项目叙事已转为“证据导向”',
+        c5t: '未来 12 个月',
+        c5a: 'Q2: 强化稳定性与可观测性',
+        c5b: 'Q3: 接入执行证明与自动 SLA 评估',
+        c5c: 'Q4-Q1: 外部 workload 试点与早期付费验证',
+        c6t: '为什么重要',
+        c6d: '如果算力交付不能被独立验证，市场越大，纠纷与风控成本越高。Hyperion 把验证前置为协议能力。',
+        cta: '想看完整论证，请返回主站查看架构拆解、路线图和研发日志。',
+      },
+      en: {
+        back: '← Back to Main Site',
+        title: 'Hyperion in 60 Seconds',
+        subtitle: 'A verifiable compute market protocol that turns compute delivery from black-box execution into traceable, auditable, explainable process assets.',
+        tag1: 'Verifiable Execution',
+        tag2: 'Dual-Account Demo',
+        tag3: 'Transparent Settlement',
+        tag4: 'Moving Toward Paid Validation',
+        c1t: 'Problem',
+        c1d: 'Most compute markets optimize for price and speed, but lack execution verifiability, causing trust costs to scale with market size.',
+        c2t: 'Solution',
+        c2d: 'Unify orders, execution states, result hashes, and dispute verdicts at protocol level; expose full task and settlement flow at product level.',
+        c3t: 'Moat',
+        c3a: 'Reproducible delivery flow (recordable, scriptable)',
+        c3b: 'Explainable economics (miner/platform/treasury)',
+        c3c: 'Extensible toward SLA and execution attestations',
+        c4t: 'Current Traction',
+        c4a: 'Stable end-to-end dual-role flow',
+        c4b: 'Core modules across order, execute, accept, govern',
+        c4c: 'Narrative upgraded to evidence-first storytelling',
+        c5t: 'Next 12 Months',
+        c5a: 'Q2: Improve reliability and observability',
+        c5b: 'Q3: Integrate execution proofs and SLA automation',
+        c5c: 'Q4-Q1: External workload pilots and early paid validation',
+        c6t: 'Why It Matters',
+        c6d: 'If compute delivery cannot be independently verified, dispute and risk-control costs grow with scale. Hyperion puts verification into protocol primitives.',
+        cta: 'Looking for the full thesis? Return to the main site for architecture breakdown, roadmap, and build logs.',
+      },
+    }
+
+    const zhBtn = document.getElementById('zh')
+    const enBtn = document.getElementById('en')
+
+    function setLang(lang) {
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en'
+      const d = dict[lang]
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const k = el.getAttribute('data-i18n')
+        if (d[k]) el.textContent = d[k]
+      })
+      zhBtn.classList.toggle('active', lang === 'zh')
+      enBtn.classList.toggle('active', lang === 'en')
+    }
+
+    zhBtn.addEventListener('click', () => setLang('zh'))
+    enBtn.addEventListener('click', () => setLang('en'))
+  </script>
+</body>
+</html>
