@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Hyperion | Scholarship Showcase Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Exo+2:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <header class="top-nav">
+      <div class="logo">PROJECT HYPERION</div>
+      <nav>
+        <a href="#mission">使命</a>
+        <a href="#progress">进展</a>
+        <a href="#blog">博客</a>
+        <a href="#roadmap">路线图</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="kicker">Scholarship Showcase</p>
+        <h1>用可验证算力市场，重写 AI 时代基础设施。</h1>
+        <p class="subtitle">
+          这是一个用于奖学金申请的项目介绍博客：展示问题定义、技术架构、真实进展、未来路线和个人执行力。
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#blog">查看最新进展</a>
+          <a class="btn ghost" href="#contact">联系与合作</a>
+        </div>
+      </section>
+
+      <section id="mission" class="panel">
+        <h2>项目使命</h2>
+        <div class="mission-grid">
+          <article>
+            <h3>问题</h3>
+            <p>算力采购和执行过程黑箱化，交付结果难验证，结算不透明。</p>
+          </article>
+          <article>
+            <h3>方案</h3>
+            <p>构建去中心化可验证算力市场，订单、执行、结果、结算全链路可追踪。</p>
+          </article>
+          <article>
+            <h3>价值</h3>
+            <p>给 AI 团队提供更低门槛、可审计、可复现的算力交易基础层。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="progress" class="panel">
+        <h2>当前进展</h2>
+        <div class="stats">
+          <div><span class="num">2</span><span class="label">账户协作模型</span></div>
+          <div><span class="num">1-Click</span><span class="label">Demo 启动与录屏</span></div>
+          <div><span class="num">E2E</span><span class="label">下单-接单-结果回传</span></div>
+          <div><span class="num">Fee Split</span><span class="label">结算分账可视化</span></div>
+        </div>
+      </section>
+
+      <section id="blog" class="panel">
+        <h2>项目博客</h2>
+        <p class="section-desc">按时间记录迭代、决策与实验，突出执行力和学习速度。</p>
+        <div id="posts" class="posts"></div>
+      </section>
+
+      <section id="roadmap" class="panel">
+        <h2>12 个月路线图</h2>
+        <ul class="timeline">
+          <li><b>Q2:</b> 强化演示稳定性，完善监控与错误可解释性。</li>
+          <li><b>Q3:</b> 引入执行证明与 SLA 自动评估。</li>
+          <li><b>Q4:</b> 开放测试网络，接入首批真实 workload。</li>
+          <li><b>Q1:</b> 产品化与商业试点，形成付费验证。</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="panel contact">
+        <h2>申请导向信息</h2>
+        <p>适用于 Thiel Fellowship / 创新奖学金申请的核心材料入口。</p>
+        <ul>
+          <li>项目一句话：可验证算力市场协议层</li>
+          <li>创始人叙事：工程驱动 + 高密度迭代</li>
+          <li>材料建议：Demo 视频、里程碑、指标截图、失败复盘</li>
+        </ul>
+      </section>
+    </main>
+
+    <template id="post-template">
+      <article class="post-card">
+        <p class="meta"></p>
+        <h3></h3>
+        <p class="excerpt"></p>
+        <button class="btn ghost small">阅读全文</button>
+      </article>
+    </template>
+
+    <dialog id="post-dialog">
+      <article>
+        <h3 id="dialog-title"></h3>
+        <p id="dialog-date" class="meta"></p>
+        <div id="dialog-content"></div>
+        <button id="close-dialog" class="btn primary small">关闭</button>
+      </article>
+    </dialog>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
