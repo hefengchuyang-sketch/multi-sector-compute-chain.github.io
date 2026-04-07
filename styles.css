@@ -66,6 +66,27 @@ body {
   padding: 14px 24px;
 }
 
+.nav-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  border: 1px solid rgba(120, 170, 255, 0.45);
+  background: rgba(8, 13, 24, 0.8);
+  color: var(--muted);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  color: #051224;
+  background: linear-gradient(120deg, #2bc4ff, #b572ff);
+  border-color: transparent;
+}
+
 .logo {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.12em;
@@ -142,6 +163,21 @@ main {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.founder-grid article {
+  border: 1px solid rgba(120, 170, 255, 0.26);
+  border-radius: 12px;
+  padding: 14px;
+  background: rgba(9, 14, 26, 0.7);
+}
+
+.founder-grid h3 { margin-top: 0; color: var(--pink); }
 
 .mission-grid article {
   border: 1px solid rgba(120, 170, 255, 0.26);
@@ -252,14 +288,17 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.58); }
 
 @media (max-width: 900px) {
   .mission-grid,
+  .founder-grid,
   .stats,
   .posts { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
   nav { display: none; }
+  .nav-actions { margin-left: auto; }
   .hero { padding: 28px 10px; }
   .mission-grid,
+  .founder-grid,
   .stats,
   .posts { grid-template-columns: 1fr; }
 }

@@ -1,39 +1,41 @@
-# Project Hyperion Showcase Blog
+# Project Hyperion Scholarship Blog
 
-一个可本地运行、可直接上传 GitHub 的炫酷科幻风项目介绍博客，适合用于奖学金申请展示。
+A futuristic local blog designed for scholarship applications. It is GitHub-ready and can be deployed directly to GitHub Pages.
 
-## 本地运行
+## Run Locally
 
-方式 1：直接双击打开 `index.html`。
+Option 1:
 
-方式 2：使用本地静态服务器（推荐）：
+- Open `index.html` directly in a browser.
+
+Option 2 (recommended):
 
 ```powershell
 cd thiel-scholarship-blog
 py -3 -m http.server 8080
 ```
 
-然后访问：
+Then visit:
 
 - http://127.0.0.1:8080
 
-## 内容结构
+## Included Sections
 
-- Hero：项目愿景
-- 使命：问题、方案、价值
-- 进展：核心指标
-- 博客：迭代记录（可扩展）
-- 路线图：12 个月目标
-- 申请导向信息：便于奖学金材料整理
+- Mission
+- Founder Story
+- Quantified Traction
+- Project Blog (timeline updates)
+- 12-Month Roadmap
+- Application assets section
+- Language switch (EN / 中文)
+- 1-page downloadable PDF summary
 
-## 快速改成你的信息
+## Quick Customization
 
-编辑：
+- `index.html`: structure and section copy
+- `script.js`: language dictionary and blog entries
+- `styles.css`: sci-fi visual style and responsive behavior
 
-- `index.html`（标题、叙事、路线图）
-- `script.js`（博客条目）
-- `styles.css`（视觉风格）
+## Deployment
 
-## 部署建议
-
-可直接部署到 GitHub Pages。
+Push this repository and enable GitHub Pages from the `main` branch.

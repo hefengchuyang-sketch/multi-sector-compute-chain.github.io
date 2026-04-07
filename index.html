@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Hyperion | Scholarship Showcase Blog</title>
+    <title>Project Hyperion | Scholarship Application Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Exo+2:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -17,77 +17,104 @@
     <header class="top-nav">
       <div class="logo">PROJECT HYPERION</div>
       <nav>
-        <a href="#mission">使命</a>
-        <a href="#progress">进展</a>
-        <a href="#blog">博客</a>
-        <a href="#roadmap">路线图</a>
+        <a href="#mission" data-i18n="navMission">Mission</a>
+        <a href="#founder" data-i18n="navFounder">Founder Story</a>
+        <a href="#traction" data-i18n="navTraction">Traction</a>
+        <a href="#blog" data-i18n="navBlog">Blog</a>
+        <a href="#roadmap" data-i18n="navRoadmap">Roadmap</a>
       </nav>
+      <div class="nav-actions">
+        <button id="lang-en" class="lang-btn active">EN</button>
+        <button id="lang-zh" class="lang-btn">中文</button>
+      </div>
     </header>
 
     <main>
       <section class="hero">
-        <p class="kicker">Scholarship Showcase</p>
-        <h1>用可验证算力市场，重写 AI 时代基础设施。</h1>
-        <p class="subtitle">
-          这是一个用于奖学金申请的项目介绍博客：展示问题定义、技术架构、真实进展、未来路线和个人执行力。
+        <p class="kicker" data-i18n="kicker">Scholarship Showcase</p>
+        <h1 data-i18n="heroTitle">Rewriting AI Infrastructure with a Verifiable Compute Market.</h1>
+        <p class="subtitle" data-i18n="heroSubtitle">
+          This local blog is designed for scholarship applications: it presents problem framing, architecture, measurable traction, and founder execution proof.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="#blog">查看最新进展</a>
-          <a class="btn ghost" href="#contact">联系与合作</a>
+          <a class="btn primary" href="#blog" data-i18n="heroCtaPrimary">Read Latest Updates</a>
+          <a class="btn ghost" href="#contact" data-i18n="heroCtaSecondary">Contact & Collaboration</a>
+          <button id="download-pdf" class="btn ghost" data-i18n="heroCtaPdf">Download 1-Page PDF</button>
         </div>
       </section>
 
       <section id="mission" class="panel">
-        <h2>项目使命</h2>
+        <h2 data-i18n="missionTitle">Mission</h2>
         <div class="mission-grid">
           <article>
-            <h3>问题</h3>
-            <p>算力采购和执行过程黑箱化，交付结果难验证，结算不透明。</p>
+            <h3 data-i18n="missionProblemTitle">Problem</h3>
+            <p data-i18n="missionProblemDesc">Compute procurement is opaque. Delivery quality is hard to verify. Settlement is often non-transparent.</p>
           </article>
           <article>
-            <h3>方案</h3>
-            <p>构建去中心化可验证算力市场，订单、执行、结果、结算全链路可追踪。</p>
+            <h3 data-i18n="missionSolutionTitle">Solution</h3>
+            <p data-i18n="missionSolutionDesc">Build a decentralized verifiable compute market where orders, execution, results, and settlement are all traceable.</p>
           </article>
           <article>
-            <h3>价值</h3>
-            <p>给 AI 团队提供更低门槛、可审计、可复现的算力交易基础层。</p>
+            <h3 data-i18n="missionValueTitle">Value</h3>
+            <p data-i18n="missionValueDesc">Give AI teams a lower-friction, auditable, reproducible compute exchange layer.</p>
           </article>
         </div>
       </section>
 
-      <section id="progress" class="panel">
-        <h2>当前进展</h2>
+      <section id="founder" class="panel">
+        <h2 data-i18n="founderTitle">Founder Story</h2>
+        <p class="section-desc" data-i18n="founderDesc">
+          I started from implementation pain: if no one can verify execution, the compute market cannot scale with trust.
+        </p>
+        <div class="founder-grid">
+          <article>
+            <h3 data-i18n="founderCard1Title">Why Me</h3>
+            <p data-i18n="founderCard1Desc">I combine protocol-level thinking with rapid product iteration and hands-on debugging.</p>
+          </article>
+          <article>
+            <h3 data-i18n="founderCard2Title">Build Speed</h3>
+            <p data-i18n="founderCard2Desc">The project progressed from fragmented modules to a complete order-accept-complete demo path.</p>
+          </article>
+          <article>
+            <h3 data-i18n="founderCard3Title">Commitment</h3>
+            <p data-i18n="founderCard3Desc">The roadmap is focused on trustable execution evidence and real workload adoption.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="traction" class="panel">
+        <h2 data-i18n="tractionTitle">Quantified Traction</h2>
         <div class="stats">
-          <div><span class="num">2</span><span class="label">账户协作模型</span></div>
-          <div><span class="num">1-Click</span><span class="label">Demo 启动与录屏</span></div>
-          <div><span class="num">E2E</span><span class="label">下单-接单-结果回传</span></div>
-          <div><span class="num">Fee Split</span><span class="label">结算分账可视化</span></div>
+          <div><span class="num">2-Account</span><span class="label" data-i18n="traction1">Order + Mining role model</span></div>
+          <div><span class="num">1-Click</span><span class="label" data-i18n="traction2">Local and Docker startup scripts</span></div>
+          <div><span class="num">E2E</span><span class="label" data-i18n="traction3">Order → Accept → Result return</span></div>
+          <div><span class="num">Fee Split</span><span class="label" data-i18n="traction4">Visible payout and fee allocation</span></div>
         </div>
       </section>
 
       <section id="blog" class="panel">
-        <h2>项目博客</h2>
-        <p class="section-desc">按时间记录迭代、决策与实验，突出执行力和学习速度。</p>
+        <h2 data-i18n="blogTitle">Project Blog</h2>
+        <p class="section-desc" data-i18n="blogDesc">Time-stamped updates on product decisions, experiments, and execution lessons.</p>
         <div id="posts" class="posts"></div>
       </section>
 
       <section id="roadmap" class="panel">
-        <h2>12 个月路线图</h2>
+        <h2 data-i18n="roadmapTitle">12-Month Roadmap</h2>
         <ul class="timeline">
-          <li><b>Q2:</b> 强化演示稳定性，完善监控与错误可解释性。</li>
-          <li><b>Q3:</b> 引入执行证明与 SLA 自动评估。</li>
-          <li><b>Q4:</b> 开放测试网络，接入首批真实 workload。</li>
-          <li><b>Q1:</b> 产品化与商业试点，形成付费验证。</li>
+          <li data-i18n="roadmap1"><b>Q2:</b> Harden demo reliability and observability.</li>
+          <li data-i18n="roadmap2"><b>Q3:</b> Add execution attestation and SLA automation.</li>
+          <li data-i18n="roadmap3"><b>Q4:</b> Launch testnet pilots with real workloads.</li>
+          <li data-i18n="roadmap4"><b>Q1:</b> Convert to product pilots and paid validation.</li>
         </ul>
       </section>
 
       <section id="contact" class="panel contact">
-        <h2>申请导向信息</h2>
-        <p>适用于 Thiel Fellowship / 创新奖学金申请的核心材料入口。</p>
+        <h2 data-i18n="applyTitle">Application Ready Assets</h2>
+        <p data-i18n="applyDesc">Core entry points for Thiel Fellowship or other innovation scholarships.</p>
         <ul>
-          <li>项目一句话：可验证算力市场协议层</li>
-          <li>创始人叙事：工程驱动 + 高密度迭代</li>
-          <li>材料建议：Demo 视频、里程碑、指标截图、失败复盘</li>
+          <li data-i18n="apply1">One-line thesis: verifiable compute market protocol layer.</li>
+          <li data-i18n="apply2">Founder narrative: engineering-first and high-velocity iteration.</li>
+          <li data-i18n="apply3">Artifacts: demo video, milestones, metrics, and failure retrospectives.</li>
         </ul>
       </section>
     </main>
@@ -97,7 +124,7 @@
         <p class="meta"></p>
         <h3></h3>
         <p class="excerpt"></p>
-        <button class="btn ghost small">阅读全文</button>
+        <button class="btn ghost small" data-i18n="readMore">Read More</button>
       </article>
     </template>
 
@@ -106,10 +133,11 @@
         <h3 id="dialog-title"></h3>
         <p id="dialog-date" class="meta"></p>
         <div id="dialog-content"></div>
-        <button id="close-dialog" class="btn primary small">关闭</button>
+        <button id="close-dialog" class="btn primary small" data-i18n="close">Close</button>
       </article>
     </dialog>
 
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
