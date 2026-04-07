@@ -1,41 +1,48 @@
-# Project Hyperion Scholarship Blog
+# Project Hyperion Intro Blog
 
-A futuristic local blog designed for scholarship applications. It is GitHub-ready and can be deployed directly to GitHub Pages.
+This repository now uses a project-introduction blog format, aligned with the GitHub Pages workflow from the referenced tutorial:
 
-## Run Locally
+1. Keep content in a username.github.io repository.
+2. Update pages locally.
+3. Push to main branch.
+4. Serve with GitHub Pages.
 
-Option 1:
+## Local Preview
 
-- Open `index.html` directly in a browser.
+Option A:
 
-Option 2 (recommended):
+- Open index.html directly.
+
+Option B (recommended):
 
 ```powershell
 cd thiel-scholarship-blog
 py -3 -m http.server 8080
 ```
 
-Then visit:
+Open http://127.0.0.1:8080
 
-- http://127.0.0.1:8080
+## Blog Structure
 
-## Included Sections
+- Sticky header and section navigation
+- Featured project update
+- Filterable post stream by tag
+- Sidebar with milestones, archives, and application kit
+- Architecture explainer section
+- 12-month roadmap timeline
 
-- Mission
-- Founder Story
-- Quantified Traction
-- Project Blog (timeline updates)
-- 12-Month Roadmap
-- Application assets section
-- Language switch (EN / 中文)
-- 1-page downloadable PDF summary
+## Where To Edit
 
-## Quick Customization
+- index.html: layout and sections
+- styles.css: visual design and responsiveness
+- script.js: post data, tag filters, archives, and dialog behavior
 
-- `index.html`: structure and section copy
-- `script.js`: language dictionary and blog entries
-- `styles.css`: sci-fi visual style and responsive behavior
+## Deployment (GitHub Pages)
 
-## Deployment
+```powershell
+git add .
+git commit -m "Update project intro blog"
+git push
+```
 
-Push this repository and enable GitHub Pages from the `main` branch.
+Then verify GitHub Pages is enabled on the main branch in repository settings.

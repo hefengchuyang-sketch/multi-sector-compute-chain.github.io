@@ -3,141 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Hyperion | Scholarship Application Blog</title>
+    <title>Project Hyperion | Build Log Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Exo+2:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="bg-grid"></div>
-    <div class="bg-orb orb-a"></div>
-    <div class="bg-orb orb-b"></div>
-
-    <header class="top-nav">
-      <div class="logo">PROJECT HYPERION</div>
-      <nav>
-        <a href="#mission" data-i18n="navMission">Mission</a>
-        <a href="#founder" data-i18n="navFounder">Founder Story</a>
-        <a href="#traction" data-i18n="navTraction">Traction</a>
-        <a href="#blog" data-i18n="navBlog">Blog</a>
-        <a href="#roadmap" data-i18n="navRoadmap">Roadmap</a>
-      </nav>
-      <div class="nav-actions">
-        <button id="lang-en" class="lang-btn active">EN</button>
-        <button id="lang-zh" class="lang-btn">中文</button>
+    <div class="noise"></div>
+    <header class="site-header reveal">
+      <div class="brand-block">
+        <p class="chip">Project Introduction Blog</p>
+        <h1>Project Hyperion</h1>
+        <p class="lead">
+          A public build journal for a verifiable compute market protocol. This page is designed to look and behave like a project-intro blog for scholarship review.
+        </p>
       </div>
+      <nav class="top-nav">
+        <a href="#updates">Updates</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#contact">Application Kit</a>
+      </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <p class="kicker" data-i18n="kicker">Scholarship Showcase</p>
-        <h1 data-i18n="heroTitle">Rewriting AI Infrastructure with a Verifiable Compute Market.</h1>
-        <p class="subtitle" data-i18n="heroSubtitle">
-          This local blog is designed for scholarship applications: it presents problem framing, architecture, measurable traction, and founder execution proof.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#blog" data-i18n="heroCtaPrimary">Read Latest Updates</a>
-          <a class="btn ghost" href="#contact" data-i18n="heroCtaSecondary">Contact & Collaboration</a>
-          <button id="download-pdf" class="btn ghost" data-i18n="heroCtaPdf">Download 1-Page PDF</button>
-        </div>
+    <main class="layout">
+      <section class="main-column">
+        <article class="featured-card reveal">
+          <p class="meta">Featured Post</p>
+          <h2 id="featured-title"></h2>
+          <p id="featured-excerpt"></p>
+          <button id="open-featured" class="btn solid">Read Full Note</button>
+        </article>
+
+        <section id="updates" class="panel reveal">
+          <div class="panel-head">
+            <h3>Latest Updates</h3>
+            <div id="tag-filters" class="tag-filters"></div>
+          </div>
+          <div id="post-list" class="post-list"></div>
+        </section>
+
+        <section id="architecture" class="panel reveal">
+          <h3>Project Architecture</h3>
+          <div class="architecture-grid">
+            <article>
+              <h4>1. Order Layer</h4>
+              <p>Creates transparent compute orders with deterministic pricing and explicit constraints.</p>
+            </article>
+            <article>
+              <h4>2. Execution Layer</h4>
+              <p>Routes workloads to miners, tracks runtime status, and stores verifiable execution evidence.</p>
+            </article>
+            <article>
+              <h4>3. Settlement Layer</h4>
+              <p>Calculates miner payout, platform fee, and treasury allocation with fully visible outputs.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="roadmap" class="panel reveal">
+          <h3>Roadmap Timeline</h3>
+          <ul class="timeline">
+            <li><strong>Q2:</strong> Improve demo reliability and observability dashboards.</li>
+            <li><strong>Q3:</strong> Add execution attestation and SLA policy automation.</li>
+            <li><strong>Q4:</strong> Run pilot workloads with external contributors.</li>
+            <li><strong>Q1:</strong> Convert pilots into measurable paid validation.</li>
+          </ul>
+        </section>
       </section>
 
-      <section id="mission" class="panel">
-        <h2 data-i18n="missionTitle">Mission</h2>
-        <div class="mission-grid">
-          <article>
-            <h3 data-i18n="missionProblemTitle">Problem</h3>
-            <p data-i18n="missionProblemDesc">Compute procurement is opaque. Delivery quality is hard to verify. Settlement is often non-transparent.</p>
-          </article>
-          <article>
-            <h3 data-i18n="missionSolutionTitle">Solution</h3>
-            <p data-i18n="missionSolutionDesc">Build a decentralized verifiable compute market where orders, execution, results, and settlement are all traceable.</p>
-          </article>
-          <article>
-            <h3 data-i18n="missionValueTitle">Value</h3>
-            <p data-i18n="missionValueDesc">Give AI teams a lower-friction, auditable, reproducible compute exchange layer.</p>
-          </article>
-        </div>
-      </section>
+      <aside class="sidebar">
+        <section class="side-card reveal">
+          <h3>About This Project</h3>
+          <p>
+            This blog documents the transition from prototype modules to a usable end-to-end compute market demo.
+          </p>
+        </section>
 
-      <section id="founder" class="panel">
-        <h2 data-i18n="founderTitle">Founder Story</h2>
-        <p class="section-desc" data-i18n="founderDesc">
-          I started from implementation pain: if no one can verify execution, the compute market cannot scale with trust.
-        </p>
-        <div class="founder-grid">
-          <article>
-            <h3 data-i18n="founderCard1Title">Why Me</h3>
-            <p data-i18n="founderCard1Desc">I combine protocol-level thinking with rapid product iteration and hands-on debugging.</p>
-          </article>
-          <article>
-            <h3 data-i18n="founderCard2Title">Build Speed</h3>
-            <p data-i18n="founderCard2Desc">The project progressed from fragmented modules to a complete order-accept-complete demo path.</p>
-          </article>
-          <article>
-            <h3 data-i18n="founderCard3Title">Commitment</h3>
-            <p data-i18n="founderCard3Desc">The roadmap is focused on trustable execution evidence and real workload adoption.</p>
-          </article>
-        </div>
-      </section>
+        <section class="side-card reveal">
+          <h3>Milestones</h3>
+          <ul>
+            <li>Dual-account demo flow online</li>
+            <li>Local + Docker startup scripts</li>
+            <li>Task output return and fee visibility</li>
+          </ul>
+        </section>
 
-      <section id="traction" class="panel">
-        <h2 data-i18n="tractionTitle">Quantified Traction</h2>
-        <div class="stats">
-          <div><span class="num">2-Account</span><span class="label" data-i18n="traction1">Order + Mining role model</span></div>
-          <div><span class="num">1-Click</span><span class="label" data-i18n="traction2">Local and Docker startup scripts</span></div>
-          <div><span class="num">E2E</span><span class="label" data-i18n="traction3">Order → Accept → Result return</span></div>
-          <div><span class="num">Fee Split</span><span class="label" data-i18n="traction4">Visible payout and fee allocation</span></div>
-        </div>
-      </section>
+        <section class="side-card reveal">
+          <h3>Archives</h3>
+          <div id="archive-list"></div>
+        </section>
 
-      <section id="blog" class="panel">
-        <h2 data-i18n="blogTitle">Project Blog</h2>
-        <p class="section-desc" data-i18n="blogDesc">Time-stamped updates on product decisions, experiments, and execution lessons.</p>
-        <div id="posts" class="posts"></div>
-      </section>
-
-      <section id="roadmap" class="panel">
-        <h2 data-i18n="roadmapTitle">12-Month Roadmap</h2>
-        <ul class="timeline">
-          <li data-i18n="roadmap1"><b>Q2:</b> Harden demo reliability and observability.</li>
-          <li data-i18n="roadmap2"><b>Q3:</b> Add execution attestation and SLA automation.</li>
-          <li data-i18n="roadmap3"><b>Q4:</b> Launch testnet pilots with real workloads.</li>
-          <li data-i18n="roadmap4"><b>Q1:</b> Convert to product pilots and paid validation.</li>
-        </ul>
-      </section>
-
-      <section id="contact" class="panel contact">
-        <h2 data-i18n="applyTitle">Application Ready Assets</h2>
-        <p data-i18n="applyDesc">Core entry points for Thiel Fellowship or other innovation scholarships.</p>
-        <ul>
-          <li data-i18n="apply1">One-line thesis: verifiable compute market protocol layer.</li>
-          <li data-i18n="apply2">Founder narrative: engineering-first and high-velocity iteration.</li>
-          <li data-i18n="apply3">Artifacts: demo video, milestones, metrics, and failure retrospectives.</li>
-        </ul>
-      </section>
+        <section id="contact" class="side-card reveal">
+          <h3>Application Kit</h3>
+          <ul>
+            <li>One-line thesis statement</li>
+            <li>Founder execution narrative</li>
+            <li>Milestone and experiment evidence</li>
+            <li>Roadmap with measurable checkpoints</li>
+          </ul>
+        </section>
+      </aside>
     </main>
 
-    <template id="post-template">
-      <article class="post-card">
-        <p class="meta"></p>
-        <h3></h3>
-        <p class="excerpt"></p>
-        <button class="btn ghost small" data-i18n="readMore">Read More</button>
-      </article>
-    </template>
-
     <dialog id="post-dialog">
-      <article>
+      <article class="dialog-article">
+        <p id="dialog-meta" class="meta"></p>
         <h3 id="dialog-title"></h3>
-        <p id="dialog-date" class="meta"></p>
-        <div id="dialog-content"></div>
-        <button id="close-dialog" class="btn primary small" data-i18n="close">Close</button>
+        <div id="dialog-body"></div>
+        <button id="dialog-close" class="btn solid">Close</button>
       </article>
     </dialog>
 
-    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <template id="post-item-template">
+      <article class="post-item">
+        <p class="meta"></p>
+        <h4></h4>
+        <p class="post-excerpt"></p>
+        <div class="post-foot">
+          <span class="tag"></span>
+          <button class="btn ghost small">Read</button>
+        </div>
+      </article>
+    </template>
+
     <script src="./script.js"></script>
   </body>
 </html>
