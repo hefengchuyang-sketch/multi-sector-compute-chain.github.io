@@ -60,9 +60,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 9;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
+  gap: 14px;
   padding: 16px clamp(14px, 3vw, 42px);
   border-bottom: 1px solid rgba(114, 170, 213, 0.18);
   background: rgba(8, 16, 28, 0.68);
@@ -73,6 +74,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: nowrap;
 }
 
 .lang-btn {
@@ -115,14 +117,29 @@ body {
 
 nav {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  padding-bottom: 2px;
+}
+
+nav::-webkit-scrollbar {
+  height: 6px;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background: rgba(114, 170, 213, 0.45);
+  border-radius: 999px;
 }
 
 nav a {
   color: var(--muted);
   text-decoration: none;
-  padding: 6px 8px;
+  padding: 6px 10px;
+  white-space: nowrap;
+  font-size: 13px;
   border-radius: 8px;
   border: 1px solid transparent;
   transition: 180ms ease;
@@ -807,8 +824,9 @@ dialog::backdrop {
 
 @media (max-width: 740px) {
   .site-nav {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 10px;
   }
 
