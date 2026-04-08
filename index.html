@@ -23,7 +23,9 @@
       <nav>
         <a href="#vision" data-i18n="navVision">理念</a>
         <a href="#fellowship" data-i18n="navFellowship">Fellowship 叙事</a>
+        <a href="#privacy-bank" data-i18n="navPrivacyBank">隐私与算力银行</a>
         <a href="#features" data-i18n="navFeatures">功能</a>
+        <a href="#coverage" data-i18n="navCoverage">功能覆盖</a>
         <a href="#visuals" data-i18n="navVisuals">图示</a>
         <a href="#structure" data-i18n="navStructure">结构图</a>
         <a href="#architecture" data-i18n="navArchitecture">架构</a>
@@ -123,6 +125,35 @@
         <div class="thesis-note" data-i18n="fellowshipNote">我们要证明的不只是“能跑”，而是“能被信任、能被付费、能规模化复制”。</div>
       </section>
 
+      <section id="privacy-bank" class="panel reveal">
+        <div class="panel-head">
+          <h3 data-i18n="pbTitle">数据隐私化 + 算力银行属性</h3>
+          <p data-i18n="pbDesc">从“我没有显卡但要跑数据”的真实问题出发，构建可验证、可审计、可结算的算力协作网络。</p>
+        </div>
+        <div class="pb-grid">
+          <article class="pb-card">
+            <h4 data-i18n="pb1Title">真实痛点</h4>
+            <p data-i18n="pb1Body">AI 科研常常需要临时高算力，个人或小团队没有足够 GPU，只能外租算力；外租过程中，数据泄露风险和责任归属常常不清晰。</p>
+          </article>
+          <article class="pb-card">
+            <h4 data-i18n="pb2Title">隐私化路径</h4>
+            <ul>
+              <li data-i18n="pb2a">端到端加密传输与任务生命周期跟踪</li>
+              <li data-i18n="pb2b">异常、争议、补偿可追踪到链上记录</li>
+              <li data-i18n="pb2c">标准/增强/机密模式适配不同风险等级</li>
+            </ul>
+          </article>
+          <article class="pb-card">
+            <h4 data-i18n="pb3Title">算力银行机制</h4>
+            <ul>
+              <li data-i18n="pb3a">闲置 GPU 成为可存入的生产型算力资产</li>
+              <li data-i18n="pb3b">需求侧按任务调用，不必一次性重资产买卡</li>
+              <li data-i18n="pb3c">收益、费用、补偿通过协议透明结算</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
       <section id="features" class="panel reveal">
         <div class="panel-head">
           <h3 data-i18n="featuresTitle">功能全景</h3>
@@ -153,6 +184,24 @@
               <li data-i18n="f3c">治理提案与投票接口</li>
             </ul>
           </article>
+        </div>
+      </section>
+
+      <section id="coverage" class="panel reveal">
+        <div class="panel-head">
+          <h3 data-i18n="coverageTitle">已实现功能覆盖图</h3>
+          <p data-i18n="coverageDesc">按能力域展示已实现模块，方便评审快速判断“不是概念稿，而是工程系统”。</p>
+        </div>
+
+        <div class="coverage-grid">
+          <article class="coverage-card"><h4 data-i18n="cv1t">共识与链层</h4><p data-i18n="cv1d">POUW/S-Box PoUW、统一共识引擎、双见证兑换</p></article>
+          <article class="coverage-card"><h4 data-i18n="cv2t">算力市场</h4><p data-i18n="cv2d">订单簿、动态定价、调度器、任务优先级策略</p></article>
+          <article class="coverage-card"><h4 data-i18n="cv3t">隐私与安全</h4><p data-i18n="cv3d">E2E 加密、S-Box 加固、防攻击与矿工安全管理</p></article>
+          <article class="coverage-card"><h4 data-i18n="cv4t">任务生命周期</h4><p data-i18n="cv4d">创建、接单、执行、验收、超时取消、结果回传</p></article>
+          <article class="coverage-card"><h4 data-i18n="cv5t">补偿与仲裁</h4><p data-i18n="cv5d">上传超时补偿、违约赔付、质押仲裁与罚没分配</p></article>
+          <article class="coverage-card"><h4 data-i18n="cv6t">治理与财库</h4><p data-i18n="cv6d">DAO 财库、治理参数、协议费池与自动分配</p></article>
+          <article class="coverage-card"><h4 data-i18n="cv7t">网络与传输</h4><p data-i18n="cv7d">消息队列、P2P 隧道、分发与 TLS 网络层</p></article>
+          <article class="coverage-card"><h4 data-i18n="cv8t">钱包与结算</h4><p data-i18n="cv8d">钱包、UTXO、主币转账、多币种结算路径</p></article>
         </div>
       </section>
 
